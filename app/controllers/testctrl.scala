@@ -4,6 +4,7 @@ import javax.inject._
 import play.api._
 import play.api.mvc._
 import play.api.libs.json.Json
+import java.io.File
 
 @Singleton
 class testctrl @Inject() extends Controller {
@@ -53,4 +54,15 @@ class testctrl @Inject() extends Controller {
     Created(obj)
   }
 
+
+  //post file
+  def post_multipart_data = Action(parse.multipartFormData) { request =>
+     var image_name = ""
+     request.body.file("fileUpload").map { picture =>
+       image_name = picture.filename
+       //path to upload can to all path in server with user permision level
+       picture.ref.moveTo(new File("/home/gerald/scala/play/belajar_play_scala/upload/" + picture.filename))
+     }
+     Ok("File has been uploaded "+image_name)
+   }
 }

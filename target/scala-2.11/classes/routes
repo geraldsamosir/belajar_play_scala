@@ -11,7 +11,13 @@ GET     /obj                        controllers.testctrl.objjson
 
 GET    /params/:name/:age           controllers.testctrl.objjsonparams(name :String,age :Int)
 
+
+
 POST  /data                         controllers.testctrl.postdata
+
+#post upload file
+
+POST /uploaded                      controllers.testctrl.post_multipart_data
 
 # An example controller showing how to use dependency injection
 GET     /count                      controllers.CountController.count

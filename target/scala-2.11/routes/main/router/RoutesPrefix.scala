@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/gerald/scala/play/belajar_play_scala/conf/routes
-// @DATE:Mon Aug 22 10:36:12 WIB 2016
+// @DATE:Mon Aug 22 16:08:17 WIB 2016
 
 
 package router {

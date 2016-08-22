@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/gerald/scala/play/belajar_play_scala/conf/routes
-// @DATE:Mon Aug 22 10:36:12 WIB 2016
+// @DATE:Mon Aug 22 16:08:17 WIB 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -14,7 +14,7 @@ import _root_.controllers.Assets.Asset
 package controllers.javascript {
   import ReverseRouteContext.empty
 
-  // @LINE:22
+  // @LINE:28
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -22,7 +22,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:22
+    // @LINE:28
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """
@@ -34,7 +34,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:17
+  // @LINE:23
   class ReverseCountController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -42,7 +42,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:17
+    // @LINE:23
     def count: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.CountController.count",
       """
@@ -62,12 +62,12 @@ package controllers.javascript {
     }
 
   
-    // @LINE:14
-    def postdata: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.testctrl.postdata",
+    // @LINE:12
+    def objjsonparams: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.testctrl.objjsonparams",
       """
-        function() {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "data"})
+        function(name0,age1) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "params/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("name", encodeURIComponent(name0)) + "/" + (""" + implicitly[PathBindable[Int]].javascriptUnbind + """)("age", age1)})
         }
       """
     )
@@ -82,22 +82,32 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:20
+    def post_multipart_data: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.testctrl.post_multipart_data",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "uploaded"})
+        }
+      """
+    )
+  
+    // @LINE:16
+    def postdata: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.testctrl.postdata",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "data"})
+        }
+      """
+    )
+  
     // @LINE:8
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.testctrl.index",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "name"})
-        }
-      """
-    )
-  
-    // @LINE:12
-    def objjsonparams: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.testctrl.objjsonparams",
-      """
-        function(name0,age1) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "params/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("name", encodeURIComponent(name0)) + "/" + (""" + implicitly[PathBindable[Int]].javascriptUnbind + """)("age", age1)})
         }
       """
     )
@@ -124,7 +134,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:19
+  // @LINE:25
   class ReverseAsyncController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -132,7 +142,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:19
+    // @LINE:25
     def message: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.AsyncController.message",
       """
