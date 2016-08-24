@@ -5,6 +5,8 @@ import play.api._
 import play.api.mvc._
 import play.api.libs.json.Json
 import java.io.File
+import play.api.Play.current
+
 
 @Singleton
 class testctrl @Inject() extends Controller {
@@ -61,7 +63,7 @@ class testctrl @Inject() extends Controller {
      request.body.file("fileUpload").map { picture =>
        image_name = picture.filename
        //path to upload can to all path in server with user permision level
-       picture.ref.moveTo(new File("/home/gerald/scala/play/belajar_play_scala/upload/" + picture.filename))
+       picture.ref.moveTo(new File(Play.application.path+"/upload/" + picture.filename))
      }
      Ok("File has been uploaded "+image_name)
    }
