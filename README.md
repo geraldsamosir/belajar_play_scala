@@ -47,3 +47,7 @@ Filters
 - ExampleFilter.scala
 
   A simple filter that adds a header to every response.
+
+Koneksi dengan database mysql menggunakan hibernate
+===================================================
+http://stackoverflow.com/questions/37965388/playframework-hibernate-jpa-cannot-connect-to-database

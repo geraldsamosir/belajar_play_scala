@@ -205,3 +205,9 @@ Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown da
 2016-08-25 16:29:29,140 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-3 - Database [default] connected at jdbc:mysql://localhost:3306/play_test
 2016-08-25 16:29:29,385 [INFO] from application in ForkJoinPool-1-worker-3 - ApplicationTimer demo: Starting application at 2016-08-25T09:29:29.384Z.
 2016-08-25 16:29:29,649 [INFO] from play.api.Play in ForkJoinPool-1-worker-3 - Application started (Dev)
+2016-08-25 16:34:01,548 [INFO] from application in application-akka.actor.default-dispatcher-4 - ApplicationTimer demo: Stopping application at 2016-08-25T09:34:01.548Z after 272s.
+2016-08-25 16:34:01,604 [INFO] from application in application-akka.actor.default-dispatcher-4 - Shutting down connection pool.
+2016-08-25 16:34:02,019 [INFO] from application in application-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
+2016-08-25 16:34:02,034 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-4 - Database [default] connected at jdbc:mysql://localhost:3306/play_test
+2016-08-25 16:34:02,083 [INFO] from application in application-akka.actor.default-dispatcher-4 - ApplicationTimer demo: Starting application at 2016-08-25T09:34:02.036Z.
+2016-08-25 16:34:02,360 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-4 - Application started (Dev)
