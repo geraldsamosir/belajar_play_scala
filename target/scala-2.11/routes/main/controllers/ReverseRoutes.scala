@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/gerald/scala/play/belajar_play_scala/conf/routes
-// @DATE:Mon Aug 22 16:08:17 WIB 2016
+// @DATE:Wed Aug 24 14:49:53 WIB 2016
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -12,14 +12,14 @@ import _root_.controllers.Assets.Asset
 // @LINE:6
 package controllers {
 
-  // @LINE:28
+  // @LINE:31
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:28
+    // @LINE:31
     def versioned(file:Asset): Call = {
       implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[Asset]].unbind("file", file))
@@ -27,14 +27,14 @@ package controllers {
   
   }
 
-  // @LINE:23
+  // @LINE:26
   class ReverseCountController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:23
+    // @LINE:26
     def count(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "count")
@@ -61,7 +61,7 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "obj")
     }
   
-    // @LINE:20
+    // @LINE:19
     def post_multipart_data(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "uploaded")
@@ -96,14 +96,14 @@ package controllers {
   
   }
 
-  // @LINE:25
+  // @LINE:28
   class ReverseAsyncController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:25
+    // @LINE:28
     def message(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "message")

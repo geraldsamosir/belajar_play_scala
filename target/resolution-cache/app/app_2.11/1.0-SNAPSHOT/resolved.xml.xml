@@ -4,7 +4,7 @@
 		module="app_2.11"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20160822103558"
+		publication="20160825161227"
 	>
 		<description>
 		app
@@ -43,6 +43,9 @@
 		<dependency org="com.typesafe.play" name="play-jdbc_2.11" rev="2.5.5" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-cache_2.11" rev="2.5.5" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-ws_2.11" rev="2.5.5" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-java-jpa_2.11" rev="2.5.5" conf="compile->default(compile)"/>
+		<dependency org="mysql" name="mysql-connector-java" rev="5.1.36" conf="compile->default(compile)"/>
+		<dependency org="org.hibernate" name="hibernate-entitymanager" rev="5.1.0.Final" conf="compile->default(compile)"/>
 		<dependency org="org.scalatestplus.play" name="scalatestplus-play_2.11" rev="1.5.1" conf="test->default(compile)"/>
 	</dependencies>
 </ivy-module>

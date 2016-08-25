@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/gerald/scala/play/belajar_play_scala/conf/routes
-// @DATE:Mon Aug 22 16:08:17 WIB 2016
+// @DATE:Wed Aug 24 14:49:53 WIB 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -14,7 +14,7 @@ import _root_.controllers.Assets.Asset
 package controllers.javascript {
   import ReverseRouteContext.empty
 
-  // @LINE:28
+  // @LINE:31
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -22,7 +22,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:28
+    // @LINE:31
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """
@@ -34,7 +34,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:23
+  // @LINE:26
   class ReverseCountController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -42,7 +42,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:23
+    // @LINE:26
     def count: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.CountController.count",
       """
@@ -82,7 +82,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:20
+    // @LINE:19
     def post_multipart_data: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.testctrl.post_multipart_data",
       """
@@ -134,7 +134,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:25
+  // @LINE:28
   class ReverseAsyncController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -142,7 +142,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:25
+    // @LINE:28
     def message: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.AsyncController.message",
       """

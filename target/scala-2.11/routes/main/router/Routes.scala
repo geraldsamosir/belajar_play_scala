@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/gerald/scala/play/belajar_play_scala/conf/routes
-// @DATE:Mon Aug 22 16:08:17 WIB 2016
+// @DATE:Wed Aug 24 14:49:53 WIB 2016
 
 package router
 
@@ -19,11 +19,11 @@ class Routes(
   HomeController_1: controllers.HomeController,
   // @LINE:8
   testctrl_3: controllers.testctrl,
-  // @LINE:23
+  // @LINE:26
   CountController_0: controllers.CountController,
-  // @LINE:25
-  AsyncController_2: controllers.AsyncController,
   // @LINE:28
+  AsyncController_2: controllers.AsyncController,
+  // @LINE:31
   Assets_4: controllers.Assets,
   val prefix: String
 ) extends GeneratedRouter {
@@ -34,11 +34,11 @@ class Routes(
     HomeController_1: controllers.HomeController,
     // @LINE:8
     testctrl_3: controllers.testctrl,
-    // @LINE:23
+    // @LINE:26
     CountController_0: controllers.CountController,
-    // @LINE:25
-    AsyncController_2: controllers.AsyncController,
     // @LINE:28
+    AsyncController_2: controllers.AsyncController,
+    // @LINE:31
     Assets_4: controllers.Assets
   ) = this(errorHandler, HomeController_1, testctrl_3, CountController_0, AsyncController_2, Assets_4, "/")
 
@@ -155,7 +155,7 @@ class Routes(
     )
   )
 
-  // @LINE:20
+  // @LINE:19
   private[this] lazy val controllers_testctrl_post_multipart_data5_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("uploaded")))
   )
@@ -167,12 +167,12 @@ class Routes(
       "post_multipart_data",
       Nil,
       "POST",
-      """""",
+      """post upload file""",
       this.prefix + """uploaded"""
     )
   )
 
-  // @LINE:23
+  // @LINE:26
   private[this] lazy val controllers_CountController_count6_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("count")))
   )
@@ -189,7 +189,7 @@ class Routes(
     )
   )
 
-  // @LINE:25
+  // @LINE:28
   private[this] lazy val controllers_AsyncController_message7_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("message")))
   )
@@ -206,7 +206,7 @@ class Routes(
     )
   )
 
-  // @LINE:28
+  // @LINE:31
   private[this] lazy val controllers_Assets_versioned8_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
@@ -256,25 +256,25 @@ class Routes(
         controllers_testctrl_postdata4_invoker.call(testctrl_3.postdata)
       }
   
-    // @LINE:20
+    // @LINE:19
     case controllers_testctrl_post_multipart_data5_route(params) =>
       call { 
         controllers_testctrl_post_multipart_data5_invoker.call(testctrl_3.post_multipart_data)
       }
   
-    // @LINE:23
+    // @LINE:26
     case controllers_CountController_count6_route(params) =>
       call { 
         controllers_CountController_count6_invoker.call(CountController_0.count)
       }
   
-    // @LINE:25
+    // @LINE:28
     case controllers_AsyncController_message7_route(params) =>
       call { 
         controllers_AsyncController_message7_invoker.call(AsyncController_2.message)
       }
   
-    // @LINE:28
+    // @LINE:31
     case controllers_Assets_versioned8_route(params) =>
       call(Param[String]("path", Right("/public")), params.fromPath[Asset]("file", None)) { (path, file) =>
         controllers_Assets_versioned8_invoker.call(Assets_4.versioned(path, file))
