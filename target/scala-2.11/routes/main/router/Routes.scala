@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/gerald/scala/play/belajar_play_scala/conf/routes
-// @DATE:Wed Aug 24 14:49:53 WIB 2016
+// @DATE:Sat Aug 27 11:26:01 WIB 2016
 
 package router
 
@@ -55,7 +55,7 @@ class Routes(
 
   def documentation = List(
     ("""GET""", this.prefix, """controllers.HomeController.index"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """name""", """controllers.testctrl.index"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """name""", """controllers.testctrl.index()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """obj""", """controllers.testctrl.objjson"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """params/""" + "$" + """name<[^/]+>/""" + "$" + """age<[^/]+>""", """controllers.testctrl.objjsonparams(name:String, age:Int)"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """data""", """controllers.testctrl.postdata"""),
@@ -92,7 +92,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("name")))
   )
   private[this] lazy val controllers_testctrl_index1_invoker = createInvoker(
-    testctrl_3.index,
+    testctrl_3.index(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.testctrl",
@@ -235,7 +235,7 @@ class Routes(
     // @LINE:8
     case controllers_testctrl_index1_route(params) =>
       call { 
-        controllers_testctrl_index1_invoker.call(testctrl_3.index)
+        controllers_testctrl_index1_invoker.call(testctrl_3.index())
       }
   
     // @LINE:10

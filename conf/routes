@@ -5,7 +5,7 @@
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
 
-GET     /name                       controllers.testctrl.index
+GET     /name                       controllers.testctrl.index()
 
 GET     /obj                        controllers.testctrl.objjson
 

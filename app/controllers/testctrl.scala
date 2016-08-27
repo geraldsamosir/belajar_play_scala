@@ -6,25 +6,38 @@ import play.api.mvc._
 import play.api.libs.json.Json
 import java.io.File
 import play.api.Play.current
+import play.api.libs.json._
+//models import
+import models.test_models
+
+//import be.cafeba.cors.filters.CorsFilter
 
 
 @Singleton
 class testctrl @Inject() extends Controller {
 
+
+
+
+
   def index =  Action {
     val a = """{"hello": "world", "age": 42}"""
-    Ok("object json manualy sting "+a)
+    val b =  test_models.test_str.toString()
+    val c =  Json.toJson(a);
+    //Ok("object json manualy sting "+a+"model test :"+b+"  obj json from model :"+c)
+    Ok(a)
   }
 
 
   ///return json and make object json in play scala
   def objjson = Action{
-    var name = "gerald"
-    var age = 21
+    val name = "gerald"
+    val age = 21
     val obj = Json.obj(
       "name" ->name ,
       "age" -> age
     )
+    //Ok(obj)
     Ok(obj)
   }
 
@@ -34,7 +47,10 @@ class testctrl @Inject() extends Controller {
       "name" ->name ,
       "age" -> age
     )
-    Ok(obj)
+    Ok(obj).withHeaders(ACCESS_CONTROL_ALLOW_ORIGIN -> "*",
+        ALLOW -> "*",
+        ACCESS_CONTROL_ALLOW_HEADERS -> "Origin, X-Requested-With, Content-Type, Accept, Referer, User-Agent"
+      )
   }
 
 
@@ -51,7 +67,7 @@ class testctrl @Inject() extends Controller {
     if(name == ""){
 
       //get json object
-      var x = obj.value("name").toString()
+      val x = obj.value("name").toString()
     }
     Created(obj)
   }
