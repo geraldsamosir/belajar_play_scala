@@ -25,7 +25,7 @@ class testctrl @Inject() extends Controller {
     val b =  test_models.test_str.toString()
     val c =  Json.toJson(a);
     //Ok("object json manualy sting "+a+"model test :"+b+"  obj json from model :"+c)
-    Ok(a)
+    Ok(a).withHeaders(ACCESS_CONTROL_ALLOW_ORIGIN -> "*")
   }
 
 
