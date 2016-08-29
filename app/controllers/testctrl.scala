@@ -10,11 +10,9 @@ import play.api.libs.json._
 //models import
 import models.test_models
 
-//import be.cafeba.cors.filters.CorsFilter
-
 
 @Singleton
-class testctrl @Inject() extends Controller {
+class testctrl @Inject()  extends Controller {
 
 
 
@@ -25,7 +23,7 @@ class testctrl @Inject() extends Controller {
     val b =  test_models.test_str.toString()
     val c =  Json.toJson(a);
     //Ok("object json manualy sting "+a+"model test :"+b+"  obj json from model :"+c)
-    Ok(a).withHeaders(ACCESS_CONTROL_ALLOW_ORIGIN -> "*")
+    Ok(a)
   }
 
 
@@ -47,29 +45,17 @@ class testctrl @Inject() extends Controller {
       "name" ->name ,
       "age" -> age
     )
-    Ok(obj).withHeaders(ACCESS_CONTROL_ALLOW_ORIGIN -> "*",
-        ALLOW -> "*",
-        ACCESS_CONTROL_ALLOW_HEADERS -> "Origin, X-Requested-With, Content-Type, Accept, Referer, User-Agent"
-      )
+    Ok(obj)
   }
 
 
   //post data in play scala
-  def postdata = Action(parse.tolerantFormUrlEncoded){
+  def postdata = Action(parse.json){
     request =>
-    val name =  request.body.get("name").map(_.head).getOrElse("")
-    val age =  request.body.get("age").map(_.head).getOrElse("0")
 
-    val obj = Json.obj(
-      "name" -> name ,
-      "age" ->  age
-    )
-    if(name == ""){
-
-      //get json object
-      val x = obj.value("name").toString()
-    }
-    Created(obj)
+    val json =  request.body
+    println(json)
+    Created(json)
   }
 
 

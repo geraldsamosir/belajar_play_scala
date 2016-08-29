@@ -7,7 +7,7 @@
 		revision="1.0-SNAPSHOT"
 		conf="compile"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20160827155426"/>
+		date="20160829160950"/>
 	<dependencies>
 		<module organisation="mysql" name="mysql-connector-java">
 			<revision name="5.1.36" status="release" pubdate="20150620022624" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://dev.mysql.com/doc/connector-j/en/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="94">
@@ -22,12 +22,12 @@
 			</revision>
 		</module>
 		<module organisation="be.cafeba" name="play-cors_2.11">
-			<revision name="1.0" status="release" pubdate="20140816050457" resolver="public" artresolver="public" homepage="http://www.cakesolutions.org/specs2-spring.html" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="93">
+			<revision name="1.0" status="release" pubdate="20140816050457" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.cakesolutions.org/specs2-spring.html" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="93">
 				<license name="MIT License" url="http://opensource.org/licenses/MIT"/>
-				<metadata-artifact status="successful" details="" size="2404" time="1030" location="/home/gerald/.ivy2/cache/be.cafeba/play-cors_2.11/ivy-1.0.xml" searched="true" original-local-location="/home/gerald/.ivy2/cache/be.cafeba/play-cors_2.11/ivy-1.0.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/be/cafeba/play-cors_2.11/1.0/play-cors_2.11-1.0.pom"/>
+				<metadata-artifact status="no" details="" size="3348" time="0" location="/home/gerald/.ivy2/cache/be.cafeba/play-cors_2.11/ivy-1.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/be/cafeba/play-cors_2.11/1.0/play-cors_2.11-1.0.pom"/>
 				<caller organisation="app" name="app_2.11" conf="compile" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
-					<artifact name="play-cors_2.11" type="jar" ext="jar" status="successful" details="" size="53578" time="2089" location="/home/gerald/.ivy2/cache/be.cafeba/play-cors_2.11/jars/play-cors_2.11-1.0.jar">
+					<artifact name="play-cors_2.11" type="jar" ext="jar" status="no" details="" size="53578" time="0" location="/home/gerald/.ivy2/cache/be.cafeba/play-cors_2.11/jars/play-cors_2.11-1.0.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/be/cafeba/play-cors_2.11/1.0/play-cors_2.11-1.0.jar"/>
 					</artifact>
 				</artifacts>

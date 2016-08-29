@@ -17,5 +17,6 @@ libraryDependencies ++= Seq(
   "org.hibernate" % "hibernate-entitymanager" % "5.1.0.Final",
   "org.scalatestplus.play" %% "scalatestplus-play" % "1.5.1" % Test
 )
+libraryDependencies += filters
 
 PlayKeys.externalizeResources := false
